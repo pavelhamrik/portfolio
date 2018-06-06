@@ -1,0 +1,24 @@
+@import 'util/mixins';
+@import 'settings';
+
+// todo: handle mobile; such mobile first :(
+
+.top-bar {
+    box-shadow: $prototype-box-shadow;
+
+    .menu {
+        li {
+            margin: 0 0.125rem;
+        }
+    }
+
+    a {
+        font-weight: $global-weight-bold;
+
+        &:hover,
+        &.button.clear:hover {
+            background: $light-gray;
+            border-radius: $global-radius * 2;
+        }
+    }
+}

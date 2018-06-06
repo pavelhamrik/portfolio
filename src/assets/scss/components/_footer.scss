@@ -1,0 +1,26 @@
+@import 'util/mixins';
+@import 'settings';
+
+footer {
+    background: $secondary-color;
+    margin-top: $global-margin * 6;
+    padding: ($global-margin * 6) 0;
+    position: relative;
+
+    &:before {
+        content: '';
+        background: $secondary-color;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: skewY(-7deg);
+        transform-origin: bottom left;
+    }
+
+    * {
+        color: $white;
+    }
+}

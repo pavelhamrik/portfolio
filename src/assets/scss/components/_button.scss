@@ -1,0 +1,24 @@
+@import 'util/mixins';
+@import 'settings';
+
+.button {
+    text-transform: uppercase;
+
+    &.primary:not(.clear) {
+        color: $white;
+        font-weight: $global-weight-bold;
+        box-shadow: 0 2px 5px 0 rgba($primary-color,.1),
+                    0 5px 20px 0 rgba($primary-color,.14);
+        transform: scale(1.0001);
+    }
+
+    &.primary:not(.clear):hover,
+    &.primary:not(.clear):focus {
+        color: $white;
+        //box-shadow: 0 3px 8px 0 rgba(scale-color($primary-color, $button-background-hover-lightness),.2),
+        //            0 8px 30px 0 rgba(scale-color($primary-color, $button-background-hover-lightness),.28);
+        box-shadow: 0 3px 8px 0 rgba($primary-color,.2),
+                    0 8px 30px 0 rgba($primary-color,.28);
+        transform: scale(1.025);
+    }
+}
