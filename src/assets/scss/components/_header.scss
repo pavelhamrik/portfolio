@@ -1,0 +1,28 @@
+@import 'util/mixins';
+@import 'settings';
+
+$header-color: $primary-color;
+
+header {
+    //background: scale-color($header-color, $lightness: 0%);
+    //margin-top: $global-margin * 6;
+    //padding: ($global-margin * 6) 0;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, #FF9800, #FFC107);
+        transform: skew(0, $custom-panel-angle) scale(1, 5);
+        transform-origin: bottom center;
+    }
+
+    * {
+        color: $white;
+    }
+}

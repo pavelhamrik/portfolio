@@ -5,20 +5,43 @@
 
 .top-bar {
     box-shadow: $prototype-box-shadow;
+    background: transparent;
 
     .menu {
+        background: transparent;
+
         li {
             margin: 0 0.125rem;
         }
+
+        .menu-item {
+            font-weight: $global-weight-normal;
+        }
+
+        .menu-text {
+            font-weight: $global-weight-normal;
+            color: rgba($button-color, 0.65);
+            font-size: map-get($button-sizes, default);
+        }
     }
 
-    a {
+    a,
+    button,
+    .button {
         font-weight: $global-weight-bold;
+        color: $button-color;
 
         &:hover,
         &.button.clear:hover {
-            background: $light-gray;
+            color: $button-color;
+            background: rgba($white, 0.2);
             border-radius: $global-radius * 2;
+            box-shadow: 0 0 1.25rem rgba(black, 0.03);
         }
+    }
+
+    .subtitle {
+        text-transform: none;
+        font-weight: $global-weight-normal;
     }
 }

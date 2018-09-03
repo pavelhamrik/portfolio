@@ -1,22 +1,24 @@
 @import 'util/mixins';
 @import 'settings';
 
+$footer-background: linear-gradient(90deg, #AB47BC, #7E57C2);
+
 footer {
-    background: $secondary-color;
+    background: $footer-background;
     margin-top: $global-margin * 6;
     padding: ($global-margin * 6) 0;
     position: relative;
 
     &:before {
         content: '';
-        background: $secondary-color;
         position: absolute;
         z-index: -1;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        transform: skewY(-7deg);
+        background: $footer-background;
+        transform: skew(0, $custom-panel-angle);
         transform-origin: bottom left;
     }
 

@@ -10,15 +10,35 @@
         box-shadow: 0 2px 5px 0 rgba($primary-color,.1),
                     0 5px 20px 0 rgba($primary-color,.14);
         transform: scale(1.0001);
+
+        &:hover,
+        &:focus {
+            color: $white;
+            box-shadow: 0 3px 8px 0 rgba($primary-color,.2),
+                        0 8px 30px 0 rgba($primary-color,.28);
+            transform: scale(1.025);
+        }
     }
 
-    &.primary:not(.clear):hover,
-    &.primary:not(.clear):focus {
-        color: $white;
-        //box-shadow: 0 3px 8px 0 rgba(scale-color($primary-color, $button-background-hover-lightness),.2),
-        //            0 8px 30px 0 rgba(scale-color($primary-color, $button-background-hover-lightness),.28);
-        box-shadow: 0 3px 8px 0 rgba($primary-color,.2),
-                    0 8px 30px 0 rgba($primary-color,.28);
-        transform: scale(1.025);
+    &.title {
+        color: $body-font-color;
+
+        //&:hover,
+        //&:focus {
+        //    color: $primary-color
+        //}
+    }
+}
+
+.inverse {
+    .button.primary:not(.clear) {
+        box-shadow: 0 2px 5px 0 rgba($black,.1),
+                    0 5px 20px 0 rgba($black,.14);
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 3px 8px 0 rgba($black,.2),
+                        0 8px 30px 0 rgba($black,.28);
+        }
     }
 }

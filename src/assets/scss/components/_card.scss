@@ -17,4 +17,9 @@
         }
     }
 
+    .card>.label:first-child,
+    .card-section>.label:first-child {
+        margin-top: 0.75rem;
+    }
+
 }
