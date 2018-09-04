@@ -4,11 +4,17 @@
 
 - [x] hello world
 - [ ] information architecture
-- [ ] project: Figure
-- [ ] project: Umime cesky
-- [ ] project: Home Health
-- [ ] project: Bit Brno
-- [ ] project: Precious Time
-- [ ] project: ?
+- [ ] GitHub pages deployment
 - [ ] play page
 - [ ] about page
+
+
+## projects
+
+- [ ] Figure
+- [ ] Umime cesky
+- [ ] Home Health
+- [ ] Precious Time
+- [ ] Bit Brno?
+- [ ] Lidi Ligy?
+- [ ] ..?
