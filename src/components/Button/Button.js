@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Button.css';
+import './Button.scss';
 
 class Button extends Component {
     render() {
-        return <a href="" className="Button">Say Hi!</a>;
+        return <a href="#0" className="Button">Say Hi!</a>;
     }
 }
 
