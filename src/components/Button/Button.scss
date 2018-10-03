@@ -1,9 +1,52 @@
 @import './../../styles/settings';
+@import './../../styles/mixins';
 
 .Button {
-    background: mediumpurple;
+    background: map-get($colors, primary);
+    box-shadow: $soft-shadow;
+    border-radius: $border-radius;
     color: $white;
-    border-radius: 0.25rem;
-    padding: 0.75rem 1rem;
+    display: inline-block;
+    padding: $button-padding;
     text-decoration: none;
+    line-height: 1rem;
+    transition: $hover-transition;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        background-color: scale-color(map-get($colors, primary), $lightness: $darken);
+        box-shadow: $floating-shadow;
+        outline: none;
+    }
+
+    &.button-round {
+        border-radius: $button-round-border-radius;
+    }
+
+    &.button-plain {
+        background-color: transparent;
+        box-shadow: none;
+        color: $black;
+
+        &:hover,
+        &:focus {
+            background-color: $faint-gray;
+        }
+    }
+
+    &.button-typographic {
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: scale-color(map-get($colors, primary), $lightness: $darken);
+        }
+    }
+
+    &.button-primary {
+        color: map-get($colors, primary);
+        font-weight: $font-weight-bold;
+    }
 }

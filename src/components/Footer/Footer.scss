@@ -1,0 +1,7 @@
+@import './../../styles/settings';
+@import './../../styles/mixins';
+
+footer {
+    background: $faint-gray;
+    @include responsive-padding();
+}

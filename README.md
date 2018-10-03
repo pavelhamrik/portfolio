@@ -1,19 +1,19 @@
 # portfolio
 
-## todos
+## development
 
 - [x] hello world
-- [ ] information architecture
 - [x] GitHub pages deployment
-- [ ] play page
-- [ ] about page
 - [ ] add grid library
+- [ ] information architecture
 
 ### optional
 
-- [ ] consider normalize/sanitize css; still needed?
+- [x] sanitize.css
 
-## projects
+## content
+
+### projects
 
 - [ ] Figure
 - [ ] Umime cesky
@@ -21,4 +21,9 @@
 - [ ] Precious Time
 - [ ] Bit Brno?
 - [ ] Lidi Ligy?
-- [ ] ..?
+
+### general
+
+- [ ] play page
+- [ ] about page
+- [ ] resume page

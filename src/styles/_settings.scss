@@ -1,5 +1,126 @@
-@import 'colors';
-@import 'sizes';
 
+// colors
 
-$font-family: sans-serif;
+$black: #34495E;
+$white: #ffffff;
+
+$faint-gray: rgba($black, 0.075);
+$light-gray: rgba($black, 0.25);
+$medium-gray: rgba($black, 0.45);
+$dark-gray: rgba($black, 0.65);
+
+$solid-faint-gray: scale-color($black, $lightness: 92%);
+
+$colors: (
+    primary: mediumpurple,
+    secondary: blue,
+    warning: orange,
+    success: green,
+    failure: red,
+);
+
+$darken: -20%;
+$lighten: 20%;
+
+// animations
+
+$default-easing: ease-out;
+$fadein-easing: ease-in;
+$swing-easing: cubic-bezier(0.7,0.2,0.3,1);
+
+$lightning-speed: 0.15s;
+$fast-speed: 0.25s;
+$medium-speed: 0.45s;
+$slow-speed: 0.85s;
+$sluggish-speed: 2s;
+
+$hover-transition: background-color $lightning-speed $default-easing,
+                   color $lightning-speed $default-easing,
+                   opacity $lightning-speed $default-easing,
+                   box-shadow $lightning-speed $default-easing;
+$size-transition: width $medium-speed $default-easing,
+                  height $medium-speed $default-easing;
+
+// box shadows
+
+$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.015);
+$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.02);
+$soft-shadow: $soft-shadow-close,
+              $soft-shadow-far;
+
+$floating-shadow-close: 0 0.125rem 0.5rem  0 rgba(0,0,0,.07);
+$floating-shadow-far: 0 5px 1.25rem 0 rgba(0,0,0,.04);
+$floating-shadow: $floating-shadow-close,
+                  $floating-shadow-far;
+
+// dimensions
+
+$app-min-width: 320px;
+
+$border-radius: 0.25rem;
+
+$vertical-padding: 0.5rem;
+$horizontal-padding: 0.75rem;
+
+// typography
+
+$font-family: 'Nunito Sans', 'Roboto', sans-serif;
+$headings-font-family: 'Merriweather', 'Roboto Slab', serif;
+
+$headings: (
+    h1: 2rem,
+    h2: 1.5rem,
+    h3: 1.25rem,
+    h4: 1rem
+);
+
+$font-size: 1rem;
+$small-font-size: 0.875rem;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$headline-font-size: 3rem;
+
+// buttons
+
+$button-padding: 0.75rem 1rem;
+$button-border-radius: $border-radius;
+$button-round-border-radius: 2rem;
+
+// tooltips
+
+$tooltip-padding: $button-padding;
+$tooltip-border-radius: $border-radius;
+
+// grid
+
+$grid-columns: 12;
+$grid-gap: 1.5rem;
+$grid-max-width: 1600px;
+
+// media queries
+
+$breakpoints: (
+    small: 600px,
+    medium: 900px,
+    large: 1200px,
+    huge: 1800px
+);
+
+$paddings: (
+    all: ( vertical: 1rem, horizontal: 1.5rem ),
+    small: ( vertical: 0.5rem, horizontal: 0.75rem ),
+    medium: ( vertical: 0.75rem, horizontal: 1.25rem ),
+    large: ( vertical: 1.5rem, horizontal: 2rem ),
+    huge: ( vertical: 2rem, horizontal: 2.5rem )
+);
+
+// layers
+
+$layers: (
+    base: 0,
+    back: -1,
+    tooltip: 2,
+    modal: 10,
+)

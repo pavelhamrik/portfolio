@@ -1,0 +1,57 @@
+@import './../../styles/settings';
+@import './../../styles/mixins';
+
+
+$grid-template-columns: '';
+@for $col from 1 through $grid-columns {
+    $grid-template-columns: $grid-template-columns + ' 1fr';
+}
+$grid-template-columns: unquote($grid-template-columns);
+
+
+.Grid {
+    display: grid;
+    max-width: $grid-max-width;
+    margin: 0 auto;
+
+    //margin-left: -$grid-gap;
+    //margin-right: -$grid-gap;
+
+    grid-template-columns: $grid-template-columns;
+    justify-content: space-around;
+
+    .Item {
+        grid-column: span $grid-columns;
+        padding-left: $grid-gap / 2;
+        padding-right: $grid-gap / 2;
+    }
+
+    // column span
+
+    @each $screen, $size in $breakpoints {
+        @include breakpoint(#{$screen}) {
+            @for $col from 1 through $grid-columns {
+                $colfactor: $grid-columns / $col;
+                @if $colfactor == round($colfactor) {
+                    &.#{$screen}-#{$col}-cols .Item {
+                        grid-column-start: auto;
+                        grid-column-end: span #{$colfactor};
+                    }
+                }
+            }
+        }
+    }
+
+    // column first item position
+
+    @each $screen, $size in $breakpoints {
+        @include breakpoint(#{$screen}) {
+            @for $position from 1 through $grid-columns {
+                &.#{$screen}-offset-#{$position} .Item:first-child {
+                    grid-column-start: #{$position + 1};
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,47 @@
+@import '/../settings';
+@import 'media-queries';
+
+@mixin padding($screen: all, $dimensions: $paddings) {
+    padding: map-get(map-get($dimensions, $screen), vertical) map-get(map-get($dimensions, $screen), horizontal);
+}
+
+@mixin vertical-padding($screen: default) {
+    $padding: map-get(map-get($paddings, $screen), vertical);
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+@mixin horizontal-padding($screen: default) {
+    $padding: map-get(map-get($paddings, $screen), horizontal);
+    padding-right: $padding;
+    padding-left: $padding;
+}
+
+@mixin padding-top($screen: default) {
+    padding-top: map-get(map-get($paddings, $screen), vertical);
+}
+
+@mixin padding-right($screen: default) {
+    padding-top: map-get(map-get($paddings, $screen), horizontal);
+}
+
+@mixin padding-bottom($screen: default) {
+    padding-bottom: map-get(map-get($paddings, $screen), vertical);
+}
+
+@mixin padding-left($screen: default) {
+    padding-top: map-get(map-get($paddings, $screen), horizontal);
+}
+
+@mixin responsive-padding($screen: all) {
+    @each $screen, $size in $breakpoints {
+        @if $screen == all {
+            @include padding();
+        }
+        @else {
+            @include breakpoint($screen) {
+                @include padding($screen);
+            }
+        }
+    }
+}

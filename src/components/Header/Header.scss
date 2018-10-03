@@ -1,5 +1,32 @@
 @import './../../styles/settings';
+@import './../../styles/mixins';
 
-.Header {
-    background: mediumpurple;
+header {
+    background: $white;
+    box-shadow: $soft-shadow;
+    @include responsive-padding();
+
+    nav {
+        //@include breakpoint(medium) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        //}
+
+        .identity {
+            font-size: 2.5rem;
+            line-height: 1rem;
+            font-family: $headings-font-family;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .menu {
+            @include breakpoint(medium) {
+                & > * {
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
 }

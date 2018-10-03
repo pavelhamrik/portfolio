@@ -1,6 +1,25 @@
+@import url('~sanitize.css');
 @import './styles/settings';
+@import './styles/mixins';
+@import './styles/typography';
+
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+//@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
 .App {
-    font-family:  $font-family;
-    font-size: 0.875rem;
+    color: $black;
+    font-family: $font-family;
+    font-size: 1rem;
+    min-width: $app-min-width;
+
+    *::selection {
+        background-color: scale-color(map-get($colors, primary), $lightness: $lighten * 2.5);
+    }
+
+    .Content {
+        @include responsive-padding();
+        min-height: 50vh;
+    }
 }

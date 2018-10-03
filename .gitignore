@@ -7,7 +7,7 @@
 /coverage
 
 # production
-/build
+#/docs
 
 # misc
 .idea/

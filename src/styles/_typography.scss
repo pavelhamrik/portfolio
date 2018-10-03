@@ -1,0 +1,13 @@
+@import './settings';
+
+@each $heading, $fontsize in $headings {
+    #{$heading} {
+        font-family: $headings-font-family;
+        font-size: $fontsize;
+        line-height: 140%;
+    }
+}
+
+.headline {
+    font-size: $headline-font-size;
+}
