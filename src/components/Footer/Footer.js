@@ -9,10 +9,10 @@ class Footer extends Component {
         return (
             <footer>
                 <Grid className='medium-2-cols large-4-cols huge-6-cols huge-offset-2'>
-                    <GridItem>Grid Item 1</GridItem>
-                    <GridItem>Grid Item 2</GridItem>
-                    <GridItem>Grid Item 3</GridItem>
-                    <GridItem>Grid Item 4</GridItem>
+                    <GridItem>Item 1</GridItem>
+                    <GridItem>Item 2</GridItem>
+                    <GridItem>Item 3</GridItem>
+                    <GridItem>Item 4</GridItem>
                 </Grid>
                 <Grid className=''>
                     <GridItem>All that footer stuff…</GridItem>

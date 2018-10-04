@@ -12,7 +12,7 @@ class Header extends Component {
                     <div className='identity'>
                         <Button href='#0' className='button-plain button-primary button-typographic'>
                             ph
-                            <Tooltip className='tooltip-discloseable'>Yup, this is Pavel. Hi!</Tooltip>
+                            <Tooltip className='tooltip-discloseable'>Yup, this is Pavel. Hey!</Tooltip>
                         </Button>
                     </div>
                     <div className='menu'>

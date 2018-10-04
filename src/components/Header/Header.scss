@@ -6,6 +6,11 @@ header {
     box-shadow: $soft-shadow;
     @include responsive-padding();
 
+    @include breakpoint(medium) {
+        position: fixed;
+        width: 100%;
+    }
+
     nav {
         //@include breakpoint(medium) {
             display: flex;

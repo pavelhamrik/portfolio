@@ -1,0 +1,17 @@
+@import './../../styles/settings';
+//@import './../../styles/mixins';
+
+.Label {
+    background-color: $faint-gray;
+    border-radius: $label-border-radius;
+    padding: $label-padding;
+
+    @each $color, $code in $colors {
+        &.label-#{$color} {
+            background-color: $code;
+            color: $white;
+        }
+    }
+
+
+}

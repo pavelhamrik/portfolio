@@ -27,7 +27,7 @@
     &.button-plain {
         background-color: transparent;
         box-shadow: none;
-        color: $black;
+        color: map-get($colors, primary);
 
         &:hover,
         &:focus {
@@ -46,7 +46,11 @@
     }
 
     &.button-primary {
-        color: map-get($colors, primary);
         font-weight: $font-weight-bold;
+    }
+
+    &.button-large {
+        font-size: $large-font-size;
+        padding: $large-button-padding;
     }
 }

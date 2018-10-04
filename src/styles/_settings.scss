@@ -11,12 +11,13 @@ $dark-gray: rgba($black, 0.65);
 
 $solid-faint-gray: scale-color($black, $lightness: 92%);
 
+$desaturate: -20;
 $colors: (
-    primary: mediumpurple,
-    secondary: blue,
-    warning: orange,
-    success: green,
-    failure: red,
+    primary: scale-color(#7e57c2, $saturation: $desaturate),
+    secondary: scale-color(#03a9f4, $saturation: $desaturate),
+    warning: scale-color(#ff9800, $saturation: $desaturate),
+    success: scale-color(#8bc34a, $saturation: $desaturate),
+    failure: scale-color(#f44336, $saturation: $desaturate)
 );
 
 $darken: -20%;
@@ -43,8 +44,8 @@ $size-transition: width $medium-speed $default-easing,
 
 // box shadows
 
-$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.015);
-$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.02);
+$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.025);
+$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.035);
 $soft-shadow: $soft-shadow-close,
               $soft-shadow-far;
 
@@ -62,6 +63,8 @@ $border-radius: 0.25rem;
 $vertical-padding: 0.5rem;
 $horizontal-padding: 0.75rem;
 
+$vertical-margin:  1.5rem;
+
 // typography
 
 $font-family: 'Nunito Sans', 'Roboto', sans-serif;
@@ -76,6 +79,10 @@ $headings: (
 
 $font-size: 1rem;
 $small-font-size: 0.875rem;
+$large-font-size: 1.25rem;
+
+$line-height: 1.5;
+$headings-line-height: 1.4;
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;
@@ -85,6 +92,7 @@ $headline-font-size: 3rem;
 // buttons
 
 $button-padding: 0.75rem 1rem;
+$large-button-padding: 1rem 1.25rem;
 $button-border-radius: $border-radius;
 $button-round-border-radius: 2rem;
 
@@ -92,6 +100,11 @@ $button-round-border-radius: 2rem;
 
 $tooltip-padding: $button-padding;
 $tooltip-border-radius: $border-radius;
+
+// labels
+
+$label-padding: 0.25rem 0.875rem;
+$label-border-radius: 2rem;
 
 // grid
 

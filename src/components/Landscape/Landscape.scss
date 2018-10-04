@@ -1,0 +1,24 @@
+@import './../../styles/settings';
+//@import './../../styles/mixins';
+
+.Landscape {
+    position: absolute;
+    z-index: map-get($layers, back);
+
+    &.landscape-top {
+        top: 0;
+    }
+
+    &.landscape-right {
+        right: 0;
+    }
+
+    &.landscape-bottom {
+        bottom: 0;
+    }
+
+    &.landscape-left {
+        left: 0;
+    }
+
+}
