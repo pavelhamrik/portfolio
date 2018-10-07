@@ -9,7 +9,7 @@ body {
 
     *::selection {
         //background-color: scale-color(map-get($colors, secondary), $lightness: $lighten * 2.5);
-        background-color: rgba(scale-color(map-get($colors, secondary), $saturation: 2, $hue: -2), 0.25);
+        background-color: rgba(scale-color(map-get($colors, primary), $saturation: 2, $hue: -2), 0.25);
         color: inherit;
     }
 }
@@ -21,6 +21,21 @@ body {
         line-height: $headings-line-height;
         margin-top: $vertical-margin;
         margin-bottom: $vertical-margin;
+    }
+}
+
+h1 {
+    strong {
+        font-weight: inherit;
+        background-color: rgba(map-get($colors, primary), 0.25);
+        color: scale-color($black, $lightness: -10%);
+
+        border-radius: $border-radius;
+
+        $edge-shift: 0.25rem;
+        margin-right: -$edge-shift;
+        margin-left: -$edge-shift;
+        padding: 0 $edge-shift;
     }
 }
 
@@ -43,15 +58,5 @@ p {
 }
 
 strong {
-    font-weight: inherit;
-    background-color: scale-color(map-get($colors, primary), $lightness: $lighten * 3.75);
-    //box-shadow: inset 0 -1px scale-color(map-get($colors, primary), $lightness: $lighten * 3);
-    color: scale-color($black, $lightness: -10%);
 
-    border-radius: $border-radius;
-
-    $edge-shift: 0.125rem;
-    margin-right: -$edge-shift;
-    margin-left: -$edge-shift;
-    padding: 0 $edge-shift;
 }

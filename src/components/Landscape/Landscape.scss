@@ -21,4 +21,18 @@
         left: 0;
     }
 
+    // svg text styles
+
+    .pattern-text {
+        font-family: serif;
+        letter-spacing: -0.35rem;
+    }
+
+    .pattern-text-large {
+        font-size: 200%;
+    }
+
+    .pattern-text-monospace {
+        font-family: monospace;
+    }
 }
