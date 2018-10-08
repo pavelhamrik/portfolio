@@ -48,10 +48,12 @@ class Landscape extends Component {
 
                 {/*<rect width='100%' height='100%' stroke='ghostwhite' fill='url(#MixedPattern2)' />*/}
 
-                <g className='far'>
-                    <circle cx={viewWidth - viewHeight * 0.4} cy={viewHeight * 0.94} r={viewHeight * 0.35} fill='#F3EBF7' />
-                    <circle cx={viewWidth - viewHeight * 0.75} cy={viewHeight * 0.92} r={viewHeight * 0.25} fill='#EDE4F2' />
+                <g className='horizon'>
+                    <circle cx={viewWidth - viewHeight * 0.43} cy={viewHeight * 0.94} r={viewHeight * 0.35} fill='#EFF0E6' />
+                    <circle cx={viewWidth - viewHeight * 0.77} cy={viewHeight * 0.92} r={viewHeight * 0.25} fill='#F5F5EB' />
+                </g>
 
+                <g className='far'>
                     <HillShape hillFill='url(#MixedPattern3)' faceFill='#2C84D0'
                                base={viewHeight} center='80' width='23' height='23' />
                     <HillShape hillFill='url(#MixedPattern2)' faceFill='orange'

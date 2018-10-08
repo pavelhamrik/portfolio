@@ -14,6 +14,7 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
+                {/* todo: <BrowserRouter basename='/portfolio'>*/}
                 <div className='App'>
                     <Header/>
                     <div className='Content'>
