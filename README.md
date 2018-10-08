@@ -4,8 +4,8 @@
 
 - [x] hello world
 - [x] GitHub pages deployment
-- [ ] add grid library
-- [ ] information architecture
+- [x] add grid library / implement grid utils
+- [ ] implement routing
 
 ### optional
 
@@ -24,6 +24,7 @@
 
 ### general
 
+- [ ] information architecture
 - [ ] play page
 - [ ] about page
 - [ ] resume page
