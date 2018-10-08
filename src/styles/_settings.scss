@@ -44,8 +44,8 @@ $size-transition: width $medium-speed $default-easing,
 
 // box shadows
 
-$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.025);
-$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.035);
+$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.02);
+$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.03);
 $soft-shadow: $soft-shadow-close,
               $soft-shadow-far;
 
@@ -125,15 +125,17 @@ $paddings: (
     all: ( vertical: 1rem, horizontal: 1.5rem ),
     small: ( vertical: 0.5rem, horizontal: 0.75rem ),
     medium: ( vertical: 0.75rem, horizontal: 1.25rem ),
-    large: ( vertical: 1.5rem, horizontal: 2rem ),
-    huge: ( vertical: 2rem, horizontal: 2.5rem )
+    large: ( vertical: 1.25rem, horizontal: 1.5rem ),
+    huge: ( vertical: 1.25rem, horizontal: 2.25rem )
 );
 
 // layers
 
 $layers: (
-    base: 0,
     back: -1,
-    tooltip: 2,
+    base: 0,
+    sticky: 1,
+    fixed: 2,
+    tooltip: 3,
     modal: 10,
 )

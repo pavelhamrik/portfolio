@@ -8,14 +8,16 @@ class HillShape extends Component {
         const { hillOpacity = '1' } = this.props;
         const { faceOpacity = '1' } = this.props;
 
+        const golden = 1.618;
+
         const { base = '10.0' } = this.props;
         const baseFloat = parseFloat(base);
         const { center = '10.0' } = this.props;
         const centerFloat = parseFloat(center);
-        const { width = '10.0' } = this.props;
-        const widthFloat = parseFloat(width);
         const { height = '10.0' } = this.props;
         const heightFloat = parseFloat(height);
+        const { width = heightFloat / golden } = this.props;
+        const widthFloat = parseFloat(width);
 
         const baseStartingPointX = centerFloat - (widthFloat / 2);
         const baseMidPointX = centerFloat - (widthFloat * 0.2);

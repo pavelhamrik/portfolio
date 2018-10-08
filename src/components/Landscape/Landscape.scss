@@ -1,9 +1,16 @@
 @import './../../styles/settings';
-//@import './../../styles/mixins';
+@import './../../styles/mixins';
 
 .Landscape {
     position: absolute;
     z-index: map-get($layers, back);
+
+    @include breakpoint(medium) {
+        max-width: 80%;
+    }
+    @include breakpoint(large) {
+        max-width: 67%;
+    }
 
     &.landscape-top {
         top: 0;
