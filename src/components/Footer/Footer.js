@@ -14,7 +14,7 @@ class Footer extends Component {
                     <GridItem>Item 3</GridItem>
                     <GridItem>Item 4</GridItem>
                 </Grid>
-                <Grid className=''>
+                <Grid className='medium-1-cols'>
                     <GridItem>All that footer stuff…</GridItem>
                 </Grid>
             </footer>

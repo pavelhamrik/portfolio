@@ -3,15 +3,15 @@
 
 .Button {
     background: map-get($colors, primary);
-    box-shadow: $soft-shadow;
     border-radius: $border-radius;
+    box-shadow: $soft-shadow;
     color: $white;
     display: inline-block;
-    padding: $button-padding;
-    text-decoration: none;
     line-height: 1rem;
-    transition: $hover-transition;
+    padding: $button-padding;
     position: relative;
+    text-decoration: none;
+    transition: $hover-transition;
 
     &:hover,
     &:focus {
@@ -30,8 +30,13 @@
         color: map-get($colors, primary);
 
         &:hover,
-        &:focus {
+        &:focus,
+        &.active {
             background-color: $faint-gray;
+        }
+
+        &.active {
+            color: $black;
         }
     }
 
@@ -39,7 +44,8 @@
         box-shadow: none;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &.active {
             background-color: transparent;
             color: scale-color(map-get($colors, primary), $lightness: $darken);
         }

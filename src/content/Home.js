@@ -16,7 +16,7 @@ class Home extends Component {
                             a <strong>developer</strong> background, a thing for <strong>ethics</strong> and a crush
                             on <strong>persuasive games</strong>.<br/>My friends say I'm diligent (yeah, boring, but how
                             useful!) and have a keen eye. </p>
-                        <p><Button href='/contact' className='button-primary button-large'>Say Hi</Button></p>
+                        <p><Button href='/contact/' className='button-primary button-large'>Say Hi</Button></p>
                     </Splash>
                 </GridItem>
             </Grid>

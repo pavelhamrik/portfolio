@@ -41,6 +41,13 @@ h1 {
 
 .headline {
     font-size: $headline-font-size;
+
+    @include breakpoint(medium) {
+
+    }
+    &:first-child {
+        margin-top: $vertical-margin * 3;
+    }
 }
 
 p {

@@ -14,16 +14,16 @@ class Header extends Component {
                     <div className='identity'>
                         <Button href='/' className='button-plain button-primary button-typographic'>
                             ph
-                            <Tooltip className='tooltip-discloseable'>Yup, this is Pavel. Hey!</Tooltip>
+                            <Tooltip className='tooltip-discloseable'>Stands for Pavel Hamrik. Hey!</Tooltip>
                         </Button>
                     </div>
                     <div className='menu'>
                         {/*<NavLink to='/work' className='button-plain button-primary'>Work</NavLink>*/}
                         {/*<NavLink to='/play' className='button-plain button-primary'>Play</NavLink>*/}
                         {/*<NavLink to='/resume' className='button-plain button-primary'>Resume</NavLink>*/}
-                        <Button href='/work' className='button-plain button-primary'>Work</Button>
-                        <Button href='/play' className='button-plain button-primary'>Play</Button>
-                        <Button href='/resume' className='button-plain button-primary'>Resume</Button>
+                        <Button href='/project/figure/' className='button-plain button-primary'>Work</Button>
+                        <Button href='/play/' className='button-plain button-primary'>Play</Button>
+                        <Button href='https://www.linkedin.com/in/hamrik/' target='_blank' className='button-plain button-primary'>Resume &#8599;</Button>
                     </div>
                 </nav>
             </header>

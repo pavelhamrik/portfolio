@@ -5,13 +5,10 @@ import { Link } from 'react-router-dom';
 class NotFound extends Component {
     render() {
         return (
-            <Grid className='medium-1-cols'>
+            <Grid className='NotFound medium-1-cols'>
                 <GridItem>
-                    <div className='NotFound'>
-                        <h1>Oh, that old pickle – not found</h1>
-                        <p>Well, we'd better <Link to='/'>head home</Link>.</p>
-                        {/*<p>Well, we'd better head home.</p>*/}
-                    </div>
+                    <h1 className='headline'>Oh, that old pickle – not found</h1>
+                    <p>Well, we'd better <Link to='/'>head home</Link>.</p>
                 </GridItem>
             </Grid>
         );

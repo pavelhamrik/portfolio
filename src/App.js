@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './content/Home';
 import Contact from './content/Contact';
 import NotFound from './content/NotFound';
+import FigureProject from "./content/projects/FigureProject";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -20,8 +21,8 @@ class App extends Component {
                     <div className='Content'>
                         <Switch>
                             <Route exact path='/' component={Home}/>
-                            {/*<Route path='/resume' component={Resume}/>*/}
-                            <Route path='/contact' component={Contact}/>
+                            <Route path='/contact/' component={Contact}/>
+                            <Route path='/project/figure/' component={FigureProject}/>
                             <Route component={NotFound}/>
                         </Switch>
                     </div>
