@@ -1,0 +1,22 @@
+@import './../../styles/settings';
+//@import './../../styles/mixins';
+
+.Monogram {
+    font-size: 2.5rem;
+    line-height: 1rem;
+    font-family: $headings-font-family;
+    padding-top: 0.3rem;
+    padding-bottom: 0.5rem;
+    white-space: nowrap;
+
+    &.monogram-inverse {
+        color: inherit !important;
+    }
+
+    //&.monogram-tight {
+    //    * {
+    //        padding-left: 0;
+    //        padding-right: 0;
+    //    }
+    //}
+}

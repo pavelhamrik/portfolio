@@ -1,0 +1,41 @@
+@import './../../styles/settings';
+//@import './../../styles/mixins';
+
+.Flex {
+    display: flex;
+
+    $alignments: (normal, stretch, center, start, end);
+    @each $alignment in $alignments {
+        &.flex-align-#{$alignment} {
+            align-items: $alignment;
+        }
+    }
+
+    $directions: (row, column);
+    @each $direction in $directions {
+        &.flex-direction-#{$direction} {
+            flex-direction: $direction;
+        }
+    }
+
+    $justifications: (flex-start, flex-end, center, space-between, space-around);
+    @each $justification in $justifications {
+        &.flex-justify-#{$justification} {
+            justify-content: $justification;
+        }
+    }
+
+    &.flex-gapped  {
+        .FlexItem  + .FlexItem {
+            margin-left: $grid-gap;
+        }
+    }
+
+    .FlexItem {
+        @for $grow from 1 through 3 {
+            &.flexitem-grow-#{$grow} {
+                flex-grow: $grow;
+            }
+        }
+    }
+}

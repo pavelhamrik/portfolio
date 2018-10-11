@@ -4,6 +4,7 @@
 header {
     background: $white;
     box-shadow: $soft-shadow;
+    //border-bottom: 1px solid $faint-gray;
     @include responsive-padding();
 
     @include breakpoint(medium) {
@@ -13,19 +14,9 @@ header {
     }
 
     nav {
-        //@include breakpoint(medium) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        //}
-
-        .identity {
-            font-size: 2.5rem;
-            line-height: 1rem;
-            font-family: $headings-font-family;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         .menu {
             @include breakpoint(medium) {

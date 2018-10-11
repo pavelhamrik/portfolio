@@ -1,5 +1,5 @@
 @import './../../styles/settings';
-//@import './../../styles/mixins';
+@import './../../styles/functions';
 
 .Label {
     background-color: $faint-gray;
@@ -9,9 +9,11 @@
     @each $color, $code in $colors {
         &.label-#{$color} {
             background-color: $code;
-            color: $white;
+            color: color-contrast($code);
         }
     }
 
-
+    & + & {
+        margin-left: 0.5rem;
+    }
 }

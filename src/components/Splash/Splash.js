@@ -11,8 +11,8 @@ class Splash extends Component {
         return (
             <div className={classNameAttr}>
                 <div className='content'>
-                    {this.props.children}
                     <Landscape className='landscape-bottom landscape-right'/>
+                    {this.props.children}
                 </div>
             </div>
         );

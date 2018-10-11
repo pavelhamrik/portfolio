@@ -3,7 +3,7 @@
 
 .Landscape {
     position: absolute;
-    z-index: map-get($layers, back);
+    //z-index: map-get($layers, back);
 
     @include breakpoint(medium) {
         max-width: 80%;

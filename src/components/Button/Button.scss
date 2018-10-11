@@ -38,6 +38,15 @@
         &.active {
             color: $black;
         }
+
+        &.button-inverse {
+            color: rgba($white, 0.85);
+
+            &:hover,
+            &:focus {
+                color: $white;
+            }
+        }
     }
 
     &.button-typographic {
@@ -49,6 +58,19 @@
             background-color: transparent;
             color: scale-color(map-get($colors, primary), $lightness: $darken);
         }
+
+        &.button-inverse {
+            color: rgba($white, 0.85);
+
+            &:hover,
+            &:focus {
+                color: $white;
+            }
+        }
+    }
+
+    &.button-link {
+        display: inline;
     }
 
     &.button-primary {

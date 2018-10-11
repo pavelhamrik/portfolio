@@ -9,7 +9,11 @@ class Button extends Component {
         const { href = '' } = this.props;
         const { target = '' } = this.props;
 
-        {/*<a href={href} className={classNameAttr} target={target}>{this.props.children}</a>*/}
+        if (href.includes('https://') || href.includes('http://')) {
+            return (
+                <a href={href} className={classNameAttr} target={target}>{this.props.children}</a>
+            );
+        }
 
         return (
             <NavLink to={href} className={classNameAttr} target={target} exact>{this.props.children}</NavLink>

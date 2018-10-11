@@ -1,0 +1,19 @@
+@import '../settings';
+
+@function color-contrast($base, $threshold: $contrast-threshold, $dark: $black, $light: $white) {
+    $red: red($base);
+    $green: green($base);
+    $blue: blue($base);
+    $alpha: alpha($base);
+
+    $average: ($red + $green + $blue) / 3 * $alpha;
+
+    @debug $average;
+
+    @if $average <= $threshold * 256 {
+        @return $dark;
+    }
+    @else {
+        @return $light;
+    }
+}

@@ -1,7 +1,8 @@
 
 // colors
 
-$black: #34495E;
+//$black: #34495E;
+$black: #2C3E4F;
 $white: #ffffff;
 
 $faint-gray: rgba($black, 0.075);
@@ -12,16 +13,23 @@ $dark-gray: rgba($black, 0.65);
 $solid-faint-gray: scale-color($black, $lightness: 92%);
 
 $desaturate: -20;
+$darken: -20%;
+$lighten: 20%;
+
 $colors: (
     primary: scale-color(#7e57c2, $saturation: $desaturate),
     secondary: scale-color(#03a9f4, $saturation: $desaturate),
     warning: scale-color(#ff9800, $saturation: $desaturate),
     success: scale-color(#8bc34a, $saturation: $desaturate),
-    failure: scale-color(#f44336, $saturation: $desaturate)
+    failure: scale-color(#f44336, $saturation: $desaturate),
+    disabled: $light-gray,
+    faded: $faint-gray
 );
 
-$darken: -20%;
-$lighten: 20%;
+$contrast-threshold: 0.5;
+
+$background-color: $white;
+$footer-color: map-get($colors, primary);
 
 // animations
 
@@ -44,13 +52,13 @@ $size-transition: width $medium-speed $default-easing,
 
 // box shadows
 
-$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.02);
-$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.03);
+$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.015);
+$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.020);
 $soft-shadow: $soft-shadow-close,
               $soft-shadow-far;
 
-$floating-shadow-close: 0 0.125rem 0.5rem  0 rgba(0,0,0,.07);
-$floating-shadow-far: 0 5px 1.25rem 0 rgba(0,0,0,.04);
+$floating-shadow-close: 0 0.125rem 0.5rem  0 rgba(0,0,0,.1);
+$floating-shadow-far: 0 5px 1.25rem 0 rgba(0,0,0,.05);
 $floating-shadow: $floating-shadow-close,
                   $floating-shadow-far;
 
@@ -70,11 +78,13 @@ $vertical-margin:  1.5rem;
 $font-family: 'Nunito Sans', 'Roboto', sans-serif;
 $headings-font-family: 'Merriweather', 'Roboto Slab', serif;
 
+$headline-font-size: 3rem;
+
 $headings: (
     h1: 2rem,
-    h2: 1.5rem,
-    h3: 1.25rem,
-    h4: 1rem
+    h2: 1.75rem,
+    h3: 1.5rem,
+    h4: 1.25rem
 );
 
 $font-size: 1rem;
@@ -87,7 +97,11 @@ $headings-line-height: 1.4;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
-$headline-font-size: 3rem;
+$alignments: (
+    left,
+    right,
+    center
+);
 
 // buttons
 
@@ -123,6 +137,7 @@ $breakpoints: (
 
 $paddings: (
     all: ( vertical: 1rem, horizontal: 1.5rem ),
+    default: ( vertical: 0.5rem, horizontal: 0.75rem ),
     small: ( vertical: 0.5rem, horizontal: 0.75rem ),
     medium: ( vertical: 0.75rem, horizontal: 1.25rem ),
     large: ( vertical: 1.25rem, horizontal: 1.5rem ),

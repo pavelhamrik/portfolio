@@ -13,12 +13,14 @@ $grid-template-columns: unquote($grid-template-columns);
     display: grid;
     max-width: $grid-max-width;
     margin: 0 auto;
-
-    //margin-left: -$grid-gap;
-    //margin-right: -$grid-gap;
-
     grid-template-columns: $grid-template-columns;
     justify-content: space-around;
+
+    &.grid-compensated-gap {
+        margin-left: -($grid-gap / 2);
+        margin-right: -($grid-gap / 2);
+
+    }
 
     .Item {
         grid-column: span $grid-columns;

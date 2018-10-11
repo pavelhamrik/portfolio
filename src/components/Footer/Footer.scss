@@ -2,6 +2,23 @@
 @import './../../styles/mixins';
 
 footer {
-    background: $faint-gray;
-    @include responsive-padding();
+    background: $footer-color;
+    @include responsive-padding($vertical-factor: 4);
+    @include breakpoint(medium) {
+        @include responsive-padding($vertical-factor: 5);
+    }
+    @include breakpoint(large) {
+        @include responsive-padding($vertical-factor: 6);
+    }
+
+    @if $footer-color != $white {
+        &, * {
+            color: rgba($white, 0.65);
+
+            &::selection {
+                background-color: rgba($white, 0.15);
+                color: $white;
+            }
+        }
+    }
 }

@@ -63,9 +63,10 @@ class Landscape extends Component {
                     <HillShape hillFill='url(#MixedPatternUpsilon)' faceFill='mediumpurple'
                                base={viewHeight} center='130' width='30' height='40' />
 
-                    <TreeShape base={viewHeight} center='67' height='8' treetopfill='#097376' />
+                    <TreeShape base={viewHeight} center='67' height='8' />
                     <TreeShape base={viewHeight} center='70' height='9' treetopfill='#097376' />
-                    <TreeShape base={viewHeight} center='100' height='12' treetopfill='url(#TreetopPattern)' />
+                    {/*<TreeShape base={viewHeight} center='100' height='12' treetopfill='url(#TreetopPattern)' />*/}
+                    <TreeShape base={viewHeight} center='100' height='12' />
                     <TreeShape base={viewHeight} center='104' height='10' treetopfill='#097376' />
                     <TreeShape base={viewHeight} center='124' height='11' treetopfill='#097376' />
                 </g>

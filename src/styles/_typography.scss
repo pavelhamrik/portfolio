@@ -1,25 +1,25 @@
 @import './settings';
+@import './mixins';
 
 body {
     color: $black;
     font-family: $font-family;
-    font-size: 1rem;
+    font-size: $font-size;
     line-height: 160%;
     min-width: $app-min-width;
+}
 
-    *::selection {
-        //background-color: scale-color(map-get($colors, secondary), $lightness: $lighten * 2.5);
-        background-color: rgba(scale-color(map-get($colors, primary), $saturation: 2, $hue: -2), 0.25);
-        color: inherit;
-    }
+*::selection {
+    background-color: rgba(scale-color(map-get($colors, primary), $saturation: 2, $hue: -2), 0.25);
+    color: inherit;
 }
 
 @each $heading, $fontsize in $headings {
     #{$heading} {
-        font-family: $headings-font-family;
+        //font-family: $headings-font-family;
         font-size: $fontsize;
         line-height: $headings-line-height;
-        margin-top: $vertical-margin;
+        margin-top: $vertical-margin * 1.5;
         margin-bottom: $vertical-margin;
     }
 }
@@ -41,10 +41,8 @@ h1 {
 
 .headline {
     font-size: $headline-font-size;
+    font-family: $headings-font-family;
 
-    @include breakpoint(medium) {
-
-    }
     &:first-child {
         margin-top: $vertical-margin * 3;
     }
@@ -60,6 +58,26 @@ p {
 
         &:last-child {
             margin-bottom: $vertical-margin * 1.5;
+        }
+    }
+}
+
+ul,
+ol {
+    margin-top: $vertical-margin;
+    margin-bottom: $vertical-margin;
+
+    &.list-plain {
+        list-style: none;
+    }
+}
+
+@each $screen, $size in $breakpoints {
+    @each $alignment in $alignments {
+        @include breakpoint($screen) {
+            .#{$screen}-#{$alignment} {
+                text-align: $alignment;
+            }
         }
     }
 }

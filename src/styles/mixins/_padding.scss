@@ -1,8 +1,8 @@
 @import '/../settings';
 @import 'media-queries';
 
-@mixin padding($screen: all, $dimensions: $paddings) {
-    padding: map-get(map-get($dimensions, $screen), vertical) map-get(map-get($dimensions, $screen), horizontal);
+@mixin padding($screen: all, $dimensions: $paddings, $vertical-factor: 1, $horizontal-factor: 1) {
+    padding: map-get(map-get($dimensions, $screen), vertical) * $vertical-factor map-get(map-get($dimensions, $screen), horizontal) * $horizontal-factor;
 }
 
 @mixin vertical-padding($screen: default) {
@@ -33,14 +33,15 @@
     padding-top: map-get(map-get($paddings, $screen), horizontal);
 }
 
-@mixin responsive-padding($screen: all) {
+@mixin responsive-padding($screen: all, $vertical-factor: 1, $horizontal-factor: 1) {
     @each $screen, $size in $breakpoints {
         @if $screen == all {
-            @include padding();
+            @include padding($vertical-factor: $vertical-factor, $horizontal-factor: $horizontal-factor);
         }
         @else {
+            @include padding($screen: default, $vertical-factor: $vertical-factor, $horizontal-factor: $horizontal-factor);
             @include breakpoint($screen) {
-                @include padding($screen);
+                @include padding($screen, $vertical-factor: $vertical-factor, $horizontal-factor: $horizontal-factor);
             }
         }
     }
