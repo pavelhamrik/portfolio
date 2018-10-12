@@ -3,13 +3,13 @@
 
 footer {
     background: $footer-color;
-    @include responsive-padding($vertical-factor: 4);
-    @include breakpoint(medium) {
-        @include responsive-padding($vertical-factor: 5);
-    }
-    @include breakpoint(large) {
-        @include responsive-padding($vertical-factor: 6);
-    }
+    @include responsive-padding($vertical-factor: 3);
+    //@include breakpoint(medium) {
+    //    @include responsive-padding($vertical-factor: 4);
+    //}
+    //@include breakpoint(large) {
+    //    @include responsive-padding($vertical-factor: 6);
+    //}
 
     @if $footer-color != $white {
         &, * {

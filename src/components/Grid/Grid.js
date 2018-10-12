@@ -7,7 +7,9 @@ class Grid extends Component {
         const classNameAttr = ('Grid ' + className).trim();
 
         return (
-            <div className={classNameAttr}>{this.props.children}</div>
+            <div className={classNameAttr}>
+                <div className='grid-content'>{this.props.children}</div>
+            </div>
         );
     }
 }

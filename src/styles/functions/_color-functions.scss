@@ -8,8 +8,6 @@
 
     $average: ($red + $green + $blue) / 3 * $alpha;
 
-    @debug $average;
-
     @if $average <= $threshold * 256 {
         @return $dark;
     }

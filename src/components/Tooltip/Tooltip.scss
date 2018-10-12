@@ -10,6 +10,7 @@
     font-weight: $font-weight-normal;
     padding: $tooltip-padding;
     position: absolute;
+    margin-left: 1rem;
     left: 100%;
     top: 0;
     transition: $hover-transition;
@@ -33,8 +34,7 @@
     }
 }
 
-*:hover > .tooltip-discloseable,
-*:focus > .tooltip-discloseable {
+*:hover > .tooltip-discloseable {
     opacity: 1;
     z-index: map-get($layers, tooltip);
 }

@@ -44,6 +44,8 @@
 
             &:hover,
             &:focus {
+                //background-color: rgba($faint-gray, 0.25);
+                background-color: $light-gray;
                 color: $white;
             }
         }
@@ -51,6 +53,8 @@
 
     &.button-typographic {
         box-shadow: none;
+        padding-right: 0;
+        padding-left: 0;
 
         &:hover,
         &:focus,
@@ -64,6 +68,7 @@
 
             &:hover,
             &:focus {
+                background-color: transparent;
                 color: $white;
             }
         }

@@ -4,7 +4,6 @@
 header {
     background: $white;
     box-shadow: $soft-shadow;
-    //border-bottom: 1px solid $faint-gray;
     @include responsive-padding();
 
     @include breakpoint(medium) {
@@ -13,17 +12,17 @@ header {
         width: 100%;
     }
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .menu {
-            @include breakpoint(medium) {
-                & > * {
-                    margin-left: 0.5rem;
-                }
-            }
-        }
-    }
+    //nav {
+    //    display: flex;
+    //    align-items: center;
+    //    justify-content: space-between;
+    //
+    //    .menu {
+    //        @include breakpoint(medium) {
+    //            & > * {
+    //                margin-left: 0.5rem;
+    //            }
+    //        }
+    //    }
+    //}
 }

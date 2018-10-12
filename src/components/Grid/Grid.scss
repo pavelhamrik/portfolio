@@ -10,16 +10,25 @@ $grid-template-columns: unquote($grid-template-columns);
 
 
 .Grid {
-    display: grid;
     max-width: $grid-max-width;
     margin: 0 auto;
-    grid-template-columns: $grid-template-columns;
-    justify-content: space-around;
 
-    &.grid-compensated-gap {
+    .grid-content {
+        display: grid;
+        grid-template-columns: $grid-template-columns;
+        justify-content: space-around;
+    }
+
+    &.grid-compensated-gap .grid-content {
         margin-left: -($grid-gap / 2);
         margin-right: -($grid-gap / 2);
+    }
 
+    $alignments: (normal, stretch, center, start, end);
+    @each $alignment in $alignments {
+        &.grid-align-#{$alignment} .grid-content {
+            align-items: $alignment;
+        }
     }
 
     .Item {

@@ -60,8 +60,8 @@ class Landscape extends Component {
                                base={viewHeight} center='110' width='30' height='30' />
                     <HillShape hillFill='#7C964E' faceFill='#9AD06D'
                                base={viewHeight} center='95' width='18' height='12' />
-                    <HillShape hillFill='url(#MixedPatternUpsilon)' faceFill='mediumpurple'
-                               base={viewHeight} center='130' width='30' height='40' />
+                    {/*<HillShape hillFill='url(#MixedPatternUpsilon)' faceFill='mediumpurple' base={viewHeight} center='130' width='30' height='40' />*/}
+                    <HillShape hillFill='#861AFF' faceFill='mediumpurple' base={viewHeight} center='130' width='30' height='40' />
 
                     <TreeShape base={viewHeight} center='67' height='8' />
                     <TreeShape base={viewHeight} center='70' height='9' treetopfill='#097376' />
