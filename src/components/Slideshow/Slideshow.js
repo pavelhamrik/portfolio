@@ -5,7 +5,7 @@ export class Slideshow extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            slideshowOn: false;
+            slideshowOn: false,
         }
     }
 
