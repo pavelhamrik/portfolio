@@ -55,18 +55,6 @@ $grid-template-columns: unquote($grid-template-columns);
         }
     }
 
-    //// column first item position
-    //
-    //@each $screen, $size in $breakpoints {
-    //    @include breakpoint(#{$screen}) {
-    //        @for $position from 1 through $grid-columns {
-    //            &.#{$screen}-offset-#{$position} .GridItem:first-child {
-    //                grid-column-start: #{$position + 1};
-    //            }
-    //        }
-    //    }
-    //}
-
     // item-based styles
 
     @each $screen, $size in $breakpoints {

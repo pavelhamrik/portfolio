@@ -3,14 +3,21 @@
 
 .Splash {
     display: flex;
-    //align-items: center;
-    min-height: 75vh;
+    align-items: center;
+    min-height: 72vh;
 
-    // todo: make responsive
     padding-top: $vertical-margin * 2;
     padding-bottom: $vertical-margin * 2;
 
+    box-shadow: 0 1px 0 $faint-gray;
+
     & > .content {
-        //position: relative;
+        width: 100%;
+    }
+
+    .figure {
+        &.floating {
+            filter: drop-shadow(0 0.5rem 1.25rem $lighter-gray) drop-shadow(0 0 1px $faint-gray);
+        }
     }
 }

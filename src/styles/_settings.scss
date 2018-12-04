@@ -6,6 +6,7 @@ $black: #2C3E4F;
 $white: #ffffff;
 
 $faint-gray: rgba($black, 0.075);
+$lighter-gray: rgba($black, 0.15);
 $light-gray: rgba($black, 0.25);
 $medium-gray: rgba($black, 0.45);
 $dark-gray: rgba($black, 0.65);
@@ -52,8 +53,8 @@ $size-transition: width $medium-speed $default-easing,
 
 // box shadows
 
-$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.017);
-$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.022);
+$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.02);
+$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.025);
 $soft-shadow: $soft-shadow-close,
               $soft-shadow-far;
 
@@ -108,7 +109,8 @@ $alignments: (
 // buttons
 
 $button-padding: 0.6875rem 1rem;
-$large-button-padding: 1rem 1.25rem;
+$inline-button-padding: 0.25rem 0;
+$large-button-padding: 0.875rem 1.25rem;
 $button-border-radius: $border-radius;
 
 // tooltips
@@ -155,4 +157,8 @@ $layers: (
     fixed: 4,
     tooltip: 8,
     modal: 10,
-)
+);
+
+// tables
+
+$table-cell-padding: 0.5rem 0.75rem;

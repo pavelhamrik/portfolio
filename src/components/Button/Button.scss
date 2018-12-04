@@ -21,7 +21,6 @@
 
     &:hover,
     &:focus {
-        //background-color: $faint-gray;
         box-shadow: $floating-shadow;
         outline: none;
     }
@@ -90,7 +89,17 @@
     }
 
     &.button-link {
-        display: inline-block;
+        background: none;
+        border: 0;
+        display: inline;
+        font-weight: $font-weight-normal;
+        padding: $inline-button-padding;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            color: scale-color(map-get($colors, primary), $lightness: $darken * 1.5);
+        }
     }
 
     &.button-large {

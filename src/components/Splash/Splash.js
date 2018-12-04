@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Landscape from './../Landscape/Landscape';
 
 import './Splash.scss';
 
@@ -11,7 +10,6 @@ class Splash extends Component {
         return (
             <div className={classNameAttr}>
                 <div className='content'>
-                    <Landscape className='landscape-bottom landscape-right'/>
                     {this.props.children}
                 </div>
             </div>

@@ -16,8 +16,9 @@ body {
 .App {
     .Content {
         background-color: $background-color;
-        @include responsive-padding();
+        overflow-x: hidden;
         position: relative;
+        @include responsive-padding();
 
         @include breakpoint(medium) {
             // todo: this has to accommodate the header better

@@ -1,8 +1,10 @@
 @import './../../styles/settings';
-//@import './../../styles/mixins';
+@import './../../styles/mixins';
 
 .Flex {
     display: flex;
+    width: 100%;
+    height: 100%;
 
     $alignments: (normal, stretch, center, start, end);
     @each $alignment in $alignments {
@@ -29,6 +31,10 @@
         .FlexItem  + .FlexItem {
             margin-left: $grid-gap;
         }
+    }
+
+    &.flex-padded {
+        @include responsive-padding($vertical-factor: 2, $horizontal-factor: 0);
     }
 
     .FlexItem {

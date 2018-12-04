@@ -1,0 +1,16 @@
+@import '/../settings';
+@import 'media-queries';
+
+//@mixin responsive-offset($screen: all, $vertical-factor: 1, $horizontal-factor: 1) {
+//    @each $screen, $size in $breakpoints {
+//        @if $screen == all {
+//            map-get(map-get($dimensions, $screen), vertical) * $vertical-factor map-get(map-get($dimensions, $screen), horizontal) * $horizontal-factor;
+//        }
+//        @else {
+//            @include padding($screen: default, $vertical-factor: $vertical-factor, $horizontal-factor: $horizontal-factor);
+//            @include breakpoint($screen) {
+//                @include padding($screen, $vertical-factor: $vertical-factor, $horizontal-factor: $horizontal-factor);
+//            }
+//        }
+//    }
+//}

@@ -7,6 +7,9 @@ body {
     font-size: $font-size;
     line-height: $line-height;
     min-width: $app-min-width;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 *::selection {
@@ -21,6 +24,13 @@ body {
         line-height: $headings-line-height;
         margin-top: $vertical-margin * 1.5;
         margin-bottom: $vertical-margin;
+
+        &.auxiliary {
+            font-size: $font-size;
+            font-weight: $font-weight-normal;
+            color: $medium-gray;
+            margin-bottom: $vertical-margin * -0.5;
+        }
     }
 }
 
@@ -42,10 +52,7 @@ h1 {
 .headline {
     font-size: $headline-font-size;
     font-family: $headings-font-family;
-
-    &:first-child {
-        margin-top: $vertical-margin * 3;
-    }
+    margin-top: 0;
 }
 
 .subhead {
@@ -53,24 +60,22 @@ h1 {
     margin-top: -$vertical-margin;
 }
 
+.lead {
+    font-size: $large-font-size;
+    line-height: $line-height;
+
+    &:last-child {
+        margin-bottom: $vertical-margin * 1.5;
+    }
+
+    &.subhead {
+        color: $black;
+    }
+}
+
 p {
     margin-top: $vertical-margin;
     margin-bottom: $vertical-margin;
-
-    &.lead {
-        font-size: $large-font-size;
-        line-height: $line-height;
-
-        &:last-child {
-            margin-bottom: $vertical-margin * 1.5;
-        }
-
-        @include breakpoint(medium) {
-            & + & {
-                margin-top: -$vertical-margin;
-            }
-        }
-    }
 }
 
 ul,
@@ -80,6 +85,25 @@ ol {
 
     &.list-plain {
         list-style: none;
+    }
+}
+
+ol {
+    list-style: none;
+    counter-reset: li;
+
+    li {
+        counter-increment: li;
+    }
+
+    li:before {
+        content: counter(li);
+        color: $light-gray;
+        display: inline-block;
+        width: 1em;
+        margin-left: -2em;
+        margin-right: 1em;
+        text-align: right;
     }
 }
 
@@ -102,6 +126,29 @@ code {
     padding: $vertical-padding * 2 $horizontal-padding * 1.5;
     margin-top: $vertical-margin;
     margin-bottom: $vertical-margin;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+
+    th {
+        color: $medium-gray;
+    }
+
+    td,
+    th {
+        padding: $table-cell-padding;
+        vertical-align: top;
+    }
+
+    tr {
+        border-bottom: 0.0626rem solid $lighter-gray;
+    }
+
+    &.table-aesthetic td:first-child {
+        width: unquote((100 / 4.2358) + '%');
+    }
 }
 
 blockquote {
@@ -140,7 +187,27 @@ cite {
     }
 }
 
-
 .white-space-emphasis {
     margin: $vertical-margin * 2 0;
+}
+
+.white-space-emphasis-top {
+    margin-top: $vertical-margin * 2;
+}
+
+.auxiliary {
+    font-size: $small-font-size;
+}
+
+.cozy-line-length {
+    max-width: 45rem;
+}
+
+.well {
+    background: $faint-gray;
+    border-radius: $block-border-radius;
+    @include responsive-padding();
+    //padding: $vertical-padding * 2 $horizontal-padding * 1.5;
+    margin-top: $vertical-margin;
+    margin-bottom: $vertical-margin;
 }

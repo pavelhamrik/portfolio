@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import * as ReactGA from 'react-ga';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import Home from './content/Home';
 import Contact from './content/Contact';
@@ -21,6 +22,8 @@ const history = createBrowserHistory();
 history.listen( () => {
     ReactGA.pageview( window.location.pathname + window.location.search );
 } );
+
+smoothscroll.polyfill();
 
 class App extends Component {
     componentDidMount() {
