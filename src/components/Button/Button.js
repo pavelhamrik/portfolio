@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Button.scss';
 import { NavLink } from "react-router-dom";
+import './Button.scss';
 
 class Button extends Component {
     render() {

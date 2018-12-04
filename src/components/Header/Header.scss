@@ -5,24 +5,12 @@ header {
     background: $white;
     box-shadow: $soft-shadow;
     @include responsive-padding();
+    position: relative;
+    z-index: map-get($layers, sticky);
 
     @include breakpoint(medium) {
         position: fixed;
         z-index: map-get($layers, fixed);
         width: 100%;
     }
-
-    //nav {
-    //    display: flex;
-    //    align-items: center;
-    //    justify-content: space-between;
-    //
-    //    .menu {
-    //        @include breakpoint(medium) {
-    //            & > * {
-    //                margin-left: 0.5rem;
-    //            }
-    //        }
-    //    }
-    //}
 }

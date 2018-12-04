@@ -1,5 +1,7 @@
-import React, {Component} from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import * as ReactGA from 'react-ga';
 
 import Home from './content/Home';
 import Contact from './content/Contact';
@@ -11,11 +13,23 @@ import Footer from "./components/Footer/Footer";
 
 import './App.scss';
 
+ReactGA.initialize( 'UA-130424963-1', {
+    debug: false,
+} );
+
+const history = createBrowserHistory();
+history.listen( () => {
+    ReactGA.pageview( window.location.pathname + window.location.search );
+} );
+
 class App extends Component {
+    componentDidMount() {
+        ReactGA.pageview( window.location.pathname + window.location.search );
+    }
+
     render() {
         return (
-            <BrowserRouter>
-                {/* todo: <BrowserRouter basename='/portfolio'>*/}
+            <Router history={history}>
                 <div className='App'>
                     <Header/>
                     <div className='Content'>
@@ -28,7 +42,7 @@ class App extends Component {
                     </div>
                     <Footer/>
                 </div>
-            </BrowserRouter>
+            </Router>
         );
     }
 }

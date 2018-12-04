@@ -19,7 +19,7 @@ class Landscape extends Component {
         return (
             <svg className={classNameAttr} width='100%' viewBox={'0 0 ' + viewWidth + ' ' + viewHeight}>
                 <NoisePattern id='SplatterNoise' color='#E6BF20' opacity='0.45'/>
-                
+
                 <GlyphPattern id='Upsilon' character='ϒϒϒ' color='#5B10DA' opacity='1' />
                 <pattern id='MixedPatternUpsilon' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'>
                     <rect x='0' y='0' width='100' height='100' fill='#861AFF' />
@@ -50,7 +50,8 @@ class Landscape extends Component {
 
                 <g className='horizon'>
                     <circle cx={viewWidth - viewHeight * 0.43} cy={viewHeight * 0.94} r={viewHeight * 0.35} fill='#EFF0E6' />
-                    <circle cx={viewWidth - viewHeight * 0.77} cy={viewHeight * 0.92} r={viewHeight * 0.25} fill='#F5F5EB' />
+                    <circle cx={viewWidth - viewHeight * 0.77} cy={viewHeight * 0.92} r={viewHeight * 0.25} fill='none' stroke='#F5F5EB' strokeWidth='1' strokeDasharray='10,2,4,2' strokeLinecap='round' />
+                    <circle cx={viewWidth - viewHeight * 0.77} cy={viewHeight * 0.92} r={viewHeight * 0.24} fill='none' stroke='#E1E1EB' strokeWidth='0.75' strokeDasharray='8,4,4,4' strokeLinecap='round' />
                 </g>
 
                 <g className='far'>
@@ -61,14 +62,14 @@ class Landscape extends Component {
                     <HillShape hillFill='#7C964E' faceFill='#9AD06D'
                                base={viewHeight} center='95' width='18' height='12' />
                     {/*<HillShape hillFill='url(#MixedPatternUpsilon)' faceFill='mediumpurple' base={viewHeight} center='130' width='30' height='40' />*/}
-                    <HillShape hillFill='#861AFF' faceFill='mediumpurple' base={viewHeight} center='130' width='30' height='40' />
+                    <HillShape hillFill='#765DA8' faceFill='#8869C2' base={viewHeight} center='130' width='30' height='40' />
 
-                    <TreeShape base={viewHeight} center='67' height='8' />
-                    <TreeShape base={viewHeight} center='70' height='9' treetopfill='#097376' />
+                    <TreeShape base={viewHeight} center='67' height='8'/>
+                    <TreeShape base={viewHeight} center='70' height='9'/>
                     {/*<TreeShape base={viewHeight} center='100' height='12' treetopfill='url(#TreetopPattern)' />*/}
-                    <TreeShape base={viewHeight} center='100' height='12' />
-                    <TreeShape base={viewHeight} center='104' height='10' treetopfill='#097376' />
-                    <TreeShape base={viewHeight} center='124' height='11' treetopfill='#097376' />
+                    <TreeShape base={viewHeight} center='100' height='12'/>
+                    <TreeShape base={viewHeight} center='104' height='10'/>
+                    <TreeShape base={viewHeight} center='124' height='11'/>
                 </g>
             </svg>
         );

@@ -1,8 +1,13 @@
 import React, {Component} from "react";
 import {Grid, GridItem} from "../components/Grid/Grid";
 import { Link } from 'react-router-dom';
+import { updateDocTitle } from './utils/documentTitle';
 
 class NotFound extends Component {
+    componentDidMount() {
+        updateDocTitle('Not Found');
+    }
+
     render() {
         return (
             <Grid className='NotFound medium-1-cols'>

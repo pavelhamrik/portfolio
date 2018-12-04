@@ -1,7 +1,7 @@
 @import './../settings';
 
 @mixin breakpoint($screen) {
-    @media (min-width: map-get($breakpoints, $screen)) {
+    @media only screen and (min-width: map-get($breakpoints, $screen)) {
         @content;
     }
 }

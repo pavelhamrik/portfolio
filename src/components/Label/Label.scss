@@ -4,6 +4,9 @@
 .Label {
     background-color: $faint-gray;
     border-radius: $label-border-radius;
+    display: inline-block;
+    margin: 0.25rem 0;
+    font-size: $small-font-size;
     padding: $label-padding;
 
     @each $color, $code in $colors {

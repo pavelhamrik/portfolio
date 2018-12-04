@@ -5,7 +5,7 @@ body {
     color: $black;
     font-family: $font-family;
     font-size: $font-size;
-    line-height: 160%;
+    line-height: $line-height;
     min-width: $app-min-width;
 }
 
@@ -48,6 +48,11 @@ h1 {
     }
 }
 
+.subhead {
+    color: $medium-gray;
+    margin-top: -$vertical-margin;
+}
+
 p {
     margin-top: $vertical-margin;
     margin-bottom: $vertical-margin;
@@ -58,6 +63,12 @@ p {
 
         &:last-child {
             margin-bottom: $vertical-margin * 1.5;
+        }
+
+        @include breakpoint(medium) {
+            & + & {
+                margin-top: -$vertical-margin;
+            }
         }
     }
 }
@@ -80,4 +91,56 @@ ol {
             }
         }
     }
+}
+
+code {
+    background: $faint-gray;
+    border-radius: $block-border-radius;
+    display: block;
+    font-size: $small-font-size;
+    //@include responsive-padding();
+    padding: $vertical-padding * 2 $horizontal-padding * 1.5;
+    margin-top: $vertical-margin;
+    margin-bottom: $vertical-margin;
+}
+
+blockquote {
+    font-family: $headings-font-family;
+    font-size: map-get($headings, h2);
+    font-weight: $font-weight-normal;
+    font-style: italic;
+    margin: $vertical-margin 0;
+    max-width: 60rem;
+}
+
+cite {
+    display: block;
+    font-style: normal;
+    font-size: $small-font-size;
+
+    blockquote + & {
+        margin-top: $vertical-margin * -0.5;
+    }
+}
+
+.quote {
+    padding-left: 1.5rem;
+    position: relative;
+    color: $dark-gray;
+
+    &:before {
+        background-color: $light-gray;
+        border-radius: $border-radius;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0.1875rem;
+    }
+}
+
+
+.white-space-emphasis {
+    margin: $vertical-margin * 2 0;
 }

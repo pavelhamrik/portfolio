@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class TreeShape extends Component {
     render() {
         const { id = 'Tree' } = this.props;
-        const { treetopfill = '#186A46' } = this.props;
+        const { treetopfill = '#2E7347' } = this.props;
         const { trunkfill = '#4A3525' } = this.props;
 
         const golden = 1.618;

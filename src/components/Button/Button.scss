@@ -2,30 +2,45 @@
 @import './../../styles/mixins';
 
 .Button {
-    background: map-get($colors, primary);
+    background: $white;
     border-radius: $border-radius;
+    border: 1px solid $light-gray;
     box-shadow: $soft-shadow;
-    color: $white;
+    color: map-get($colors, primary);
     display: inline-block;
+    font-weight: $font-weight-bold;
     line-height: 1rem;
     padding: $button-padding;
     position: relative;
     text-decoration: none;
     transition: $hover-transition;
 
+    & + &:not(:first-child) {
+        margin-left: 0.5rem;
+    }
+
     &:hover,
     &:focus {
-        background-color: scale-color(map-get($colors, primary), $lightness: $darken);
+        //background-color: $faint-gray;
         box-shadow: $floating-shadow;
         outline: none;
     }
 
-    &.button-round {
-        border-radius: $button-round-border-radius;
+    &.button-primary {
+        background: map-get($colors, primary);
+        border-color: transparent;
+        color: $white;
+        font-weight: $font-weight-bold;
+
+        &:hover,
+        &:focus {
+            background-color: scale-color(map-get($colors, primary), $lightness: $darken);
+        }
     }
 
     &.button-plain {
         background-color: transparent;
+        border: none;
         box-shadow: none;
         color: map-get($colors, primary);
 
@@ -75,15 +90,14 @@
     }
 
     &.button-link {
-        display: inline;
-    }
-
-    &.button-primary {
-        font-weight: $font-weight-bold;
+        display: inline-block;
     }
 
     &.button-large {
-        font-size: $large-font-size;
+        //font-size: $large-font-size;
         padding: $large-button-padding;
+        & + &:not(:first-child) {
+            margin-left: 1.25rem;
+        }
     }
 }
