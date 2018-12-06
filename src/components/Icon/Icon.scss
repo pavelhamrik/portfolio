@@ -1,0 +1,32 @@
+@import './../../styles/settings';
+@import './../../styles/mixins';
+
+.Icon {
+    &.icon-boxed {
+        //background: linear-gradient(135deg, $faint-gray, $lighter-gray);
+        background: $faint-gray;
+        border-radius: $border-radius;
+        text-shadow: $soft-shadow;
+        color: map-get($colors, primary);
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.875rem;
+    }
+}
+
+.IconBlock {
+    display: flex;
+    align-items: center;
+
+    & > * {
+        margin: 0;
+    }
+
+    &.spacious {
+        margin-top: $vertical-margin * 1.5;
+        margin-bottom: $vertical-margin * 1.5;
+    }
+}

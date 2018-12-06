@@ -22,7 +22,7 @@ class Home extends Component {
                             on <strong>persuasive games</strong>.</p>
                         <p className='lead cozy-line-length'>My friends say I'm diligent (yeah, boring, how useful!) and have a keen eye. </p>
                         <p className='white-space-emphasis'>
-                            <Button href='/project/figure/' className='button-large'>See My Work</Button>
+                            <Button href='/project/figure/' className='button-large button-primary'>See My Work</Button>
                             <Button href='/contact/' className='button-large'>Say Hi</Button>
                         </p>
                     </Splash>

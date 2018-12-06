@@ -5,10 +5,22 @@
     max-width: 100%;
     border-radius: $block-border-radius;
     box-shadow: $soft-shadow;
-    border: 0.0625rem solid $lighter-gray;
+    //border: 0.0625rem solid $lighter-gray;
     margin: $vertical-margin 0;
     overflow: hidden;
-    //height: 100%;
+    position: relative;
+
+    &:after {
+        border: 0.0625rem solid $faint-gray;
+        border-radius: $block-border-radius;
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 
     &:not(.unpadded) .image-container {
         @include responsive-padding($horizontal-factor: 0.5);
@@ -41,6 +53,10 @@
         max-height: 100vw;
         padding: 0;
         //height: auto;
+
+        &:after {
+            display: none;
+        }
 
         img {
             max-width: unset;

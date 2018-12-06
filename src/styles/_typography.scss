@@ -197,6 +197,18 @@ cite {
     margin-top: $vertical-margin * 2;
 }
 
+.white-space-emphasis-bottom {
+    margin-bottom: $vertical-margin * 2;
+}
+
+.white-space-great-emphasis-top {
+    margin-top: $vertical-margin * 4;
+}
+
+.white-space-great-emphasis-bottom {
+    margin-bottom: $vertical-margin * 4;
+}
+
 .auxiliary {
     font-size: $small-font-size;
 }
