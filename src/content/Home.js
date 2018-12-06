@@ -12,7 +12,7 @@ class Home extends Component {
 
     render() {
         return (
-            <Grid className='medium-1-cols'>
+            <Grid className='medium-1-cols Home'>
                 <GridItem>
                     <Splash>
                         <Landscape className='landscape-bottom landscape-right'/>

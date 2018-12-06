@@ -4,20 +4,21 @@
 .Splash {
     display: flex;
     align-items: center;
-    min-height: 72vh;
+    min-height: 74vh;
 
     padding-top: $vertical-margin * 2;
     padding-bottom: $vertical-margin * 2;
+
+    position: relative;
 
     box-shadow: 0 1px 0 $faint-gray;
 
     & > .content {
         width: 100%;
     }
+}
 
-    .figure {
-        &.floating {
-            filter: drop-shadow(0 0.5rem 1.25rem $lighter-gray) drop-shadow(0 0 1px $faint-gray);
-        }
-    }
+.slideshow-open .Splash,
+.Home .Splash {
+    box-shadow: none;
 }

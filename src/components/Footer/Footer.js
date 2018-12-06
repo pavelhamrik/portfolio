@@ -17,13 +17,16 @@ class Footer extends Component {
                             <FlexItem>
                                 <Monogram className='monogram-inverse' />
                             </FlexItem>
-                            <FlexItem>
-                                <p>Pavel Hamrik &bull; Product designer with&nbsp;zeal</p>
+                            <FlexItem className='flexitem-grow-2'>
+                                <p>Pavel Hamrik
+                                    <span className='all-display-none small-display-inline'> &bull; </span>
+                                    <span className='all-display-block small-display-inline'>Product designer with&nbsp;zeal</span>
+                                </p>
                             </FlexItem>
                         </Flex>
                     </GridItem>
-                    <GridItem className='medium-right'>
-                        <p>
+                    <GridItem>
+                        <p className='all-align-center small-align-right'>
                             <Button href={MailToUrl} className='button-plain button-inverse'>Email</Button>
                             <Button href='https://www.linkedin.com/in/hamrik/' target='_blank' className='button-plain button-inverse'>LinkedIn&nbsp;&#8599;</Button>
                             <Button href='https://github.com/pavelhamrik' target='_blank' className='button-plain button-inverse'>GitHub&nbsp;&#8599;</Button>

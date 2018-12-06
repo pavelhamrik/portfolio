@@ -1,13 +1,16 @@
 @import url('~sanitize.css');
+
 @import './styles/settings';
 @import './styles/mixins';
 @import './styles/typography';
+@import './styles/responsive-utils';
 
 //@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 //@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&subset=latin-ext');
 //@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400i,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 body {
     background-color: $footer-color;
@@ -17,12 +20,13 @@ body {
     .Content {
         background-color: $background-color;
         overflow-x: hidden;
-        position: relative;
-        @include responsive-padding();
+        @include responsive-padding($vertical-factor: 0);
 
         @include breakpoint(medium) {
-            // todo: this has to accommodate the header better
-            border-top: 4rem solid transparent;
+            padding-top: 4.5rem;
+        }
+        @include breakpoint(large) {
+            padding-top: 5rem;
         }
     }
 }

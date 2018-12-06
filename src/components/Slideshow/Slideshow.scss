@@ -2,9 +2,126 @@
 
 .Slideshow {
 
-    &.on {
-        .Slide {
+    &.slideshow-open {
+        //background-color: $black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: map-get($layers, modal);
+        font-size: $slideshow-font-size;
 
+        .Slide {
+            display: none;
+            background-color: $white;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow-x: hidden;
+
+            &.slide-current {
+                display: flex;
+            }
+
+            & > .content {
+                padding-top: $vertical-margin * 2;
+                padding-bottom: $vertical-margin * 4;
+                margin: auto 2rem;
+                width: 100%;
+            }
+        }
+
+        .slideshow-hide {
+            display: none;
+        }
+
+        @each $heading, $fontsize in $slideshow-headings {
+            #{$heading} {
+                font-size: $fontsize;
+
+                &.auxiliary {
+                    font-size: $slideshow-small-font-size;
+                }
+            }
+        }
+
+        .auxiliary,
+        .Label {
+            font-size: $slideshow-small-font-size;
+        }
+
+        .lead {
+            font-size: $slideshow-font-size;
+        }
+    }
+}
+
+.SlideshowLegend {
+    position: absolute;
+    z-index: map-get($layers, modal) + 1;
+    right: 1.5rem;
+    bottom: 2rem;
+
+    .fake-key-group {
+        margin: 0 0.5rem;
+        display: inline-block;
+    }
+
+    .fake-key {
+        background-color: $white;
+        border: 0.0625rem solid $light-gray;
+        border-bottom-width: 0.125rem;
+        border-radius: $button-border-radius;
+        box-shadow: $soft-shadow;
+        color: $dark-gray;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        padding-top: 0.1875em;
+        font-size: $small-font-size;
+        text-align: center;
+        opacity: 0.75;
+    }
+}
+
+.SlideshowSwitch {
+    display: inline-block;
+
+    [type=checkbox] {
+        display: none;
+    }
+
+    [type=checkbox] ~ label .switch {
+        background-color: $lighter-gray;
+        border-radius: $block-border-radius;
+        display: inline-block;
+        height: 0.75rem;
+        margin-right: 0.75rem;
+        position: relative;
+        width: 2.5rem;
+
+        &:after {
+            background-color: $white;
+            border: 0.0625rem solid $light-gray;
+            border-radius: 2rem;
+            box-shadow: $button-shadow;
+            content: '';
+            display: block;
+            transition: background-color $lightning-speed $swing-easing, right $fast-speed cubic-bezier(0.5, 0, 0.4, 1.5);
+
+            height: 1.375rem;
+            width: 1.375rem;
+            position: absolute;
+            right: calc(100% - 1.375rem);
+            top: -0.34375rem;
+        }
+    }
+
+    [type=checkbox]:checked ~ label .switch {
+        &:after {
+            background-color: map-get($colors, primary);
+            right: 0;
         }
     }
 }

@@ -53,15 +53,26 @@ $size-transition: width $medium-speed $default-easing,
 
 // box shadows
 
-$soft-shadow-close: 0 0.125rem 0.25rem  0 rgba(0,0,0,.02);
-$soft-shadow-far: 0 0.25rem 1rem 0 rgba(0,0,0,.025);
-$soft-shadow: $soft-shadow-close,
-              $soft-shadow-far;
+$soft-shadow-close: 0 0.125rem 0.25rem rgba(0,0,0,0.025);
+$soft-shadow-far: 0 0.25rem 1rem rgba(0,0,0,.025);
+$soft-shadow:
+    $soft-shadow-close,
+    $soft-shadow-far;
 
-$floating-shadow-close: 0 0.125rem 0.5rem  0 rgba(0,0,0,.1);
-$floating-shadow-far: 0 5px 1.25rem 0 rgba(0,0,0,.05);
-$floating-shadow: $floating-shadow-close,
-                  $floating-shadow-far;
+$raised-shadow-close: 0 0.125rem 0.5rem rgba(0,0,0,0.085);
+$raised-shadow-far: 0 0.3125rem 1.25rem rgba(0,0,0,0.035);
+$raised-shadow:
+    $raised-shadow-close,
+    $raised-shadow-far;
+
+$floating-shadow-close: 0 0.25rem 0.5rem rgba(0,0,0,0.035);
+$floating-shadow-far: 0 0.5rem 1.25rem rgba(0,0,0,0.075);
+$floating-shadow:
+    $floating-shadow-close,
+    $floating-shadow-far;
+
+$button-shadow-close: 0 0.125rem 0.3125rem rgba(0,0,0,0.05);
+$button-shadow: $button-shadow-close;
 
 // dimensions
 
@@ -73,7 +84,7 @@ $block-border-radius: $border-radius * 1.75;
 $vertical-padding: 0.5rem;
 $horizontal-padding: 0.75rem;
 
-$vertical-margin:  1.25rem;
+$vertical-margin:  1.125rem;
 
 // typography
 
@@ -87,12 +98,21 @@ $headings: (
     h1: 2rem,
     h2: 1.5rem,
     h3: 1.25rem,
-    h4: 1rem
 );
 
 $font-size: 1rem;
 $small-font-size: 0.875rem;
 $large-font-size: 1.25rem;
+
+$slideshow-headings: (
+        h1: 3rem,
+        h2: 2.25rem,
+        h3: 1.75rem,
+);
+
+$slideshow-font-size: 1.5rem;
+$slideshow-small-font-size: 1.35rem;
+$slideshow-large-font-size: 2rem;
 
 $line-height: 1.625;
 $headings-line-height: 1.4;

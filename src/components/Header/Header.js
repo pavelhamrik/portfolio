@@ -17,8 +17,8 @@ export default class Header extends Component {
                             <Tooltip className='tooltip-discloseable'>Yup, that's me. Hey!</Tooltip>
                         </Monogram>
                     </GridItem>
-                    <GridItem className='col-all-10 all-right'>
-                        <div className='menu'>
+                    <GridItem className='col-all-10'>
+                        <div className='menu all-align-right'>
                             <Button href='/project/figure/' className='button-plain'>Work</Button>
                             <Button href='/contact/' className='button-plain'>Contact</Button>
                             {/*<Button href='/play/' className='button-plain'>Play</Button>*/}

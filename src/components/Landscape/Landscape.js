@@ -49,20 +49,23 @@ class Landscape extends Component {
                 {/*<rect width='100%' height='100%' stroke='ghostwhite' fill='url(#MixedPattern2)' />*/}
 
                 <g className='horizon'>
-                    <circle cx={viewWidth - viewHeight * 0.43} cy={viewHeight * 0.94} r={viewHeight * 0.35} fill='#EFF0E6' />
-                    <circle cx={viewWidth - viewHeight * 0.77} cy={viewHeight * 0.92} r={viewHeight * 0.25} fill='none' stroke='#F5F5EB' strokeWidth='1' strokeDasharray='10,2,4,2' strokeLinecap='round' />
-                    <circle cx={viewWidth - viewHeight * 0.77} cy={viewHeight * 0.92} r={viewHeight * 0.24} fill='none' stroke='#E1E1EB' strokeWidth='0.75' strokeDasharray='8,4,4,4' strokeLinecap='round' />
+                    <circle cx={viewWidth - viewHeight * 0.42} cy={viewHeight * 0.94} r={viewHeight * 0.31} fill='#E7E8DF' />
+                    <circle cx={viewWidth - viewHeight * 0.78} cy={viewHeight * 0.97} r={viewHeight * 0.25} fill='#EFF0E6' />
+                    {/*<circle cx={viewWidth - viewHeight * 0.77} cy={viewHeight * 0.92} r={viewHeight * 0.25} fill='none' stroke='#F5F5EB' strokeWidth='1' strokeDasharray='10,2,4,2' strokeLinecap='round' />*/}
+                    {/*<circle cx={viewWidth - viewHeight * 0.77} cy={viewHeight * 0.92} r={viewHeight * 0.24} fill='none' stroke='#E1E1EB' strokeWidth='0.75' strokeDasharray='8,4,4,4' strokeLinecap='round' />*/}
                 </g>
 
                 <g className='far'>
                     <HillShape hillFill='url(#MixedPattern3)' faceFill='#2C84D0'
-                               base={viewHeight} center='80' width='23' height='23' />
+                               base={viewHeight} center='80' width='23' height='20' />
                     <HillShape hillFill='url(#MixedPattern2)' faceFill='orange'
-                               base={viewHeight} center='110' width='30' height='30' />
+                               base={viewHeight} center='110' width='30' height='28' />
                     <HillShape hillFill='#7C964E' faceFill='#9AD06D'
-                               base={viewHeight} center='95' width='18' height='12' />
+                               base={viewHeight} center='95' width='18' height='13' />
+                    <HillShape hillFill='#765DA8' faceFill='#8869C2'
+                               base={viewHeight} center='130' width='33' height='35' />
                     {/*<HillShape hillFill='url(#MixedPatternUpsilon)' faceFill='mediumpurple' base={viewHeight} center='130' width='30' height='40' />*/}
-                    <HillShape hillFill='#765DA8' faceFill='#8869C2' base={viewHeight} center='130' width='30' height='40' />
+
 
                     <TreeShape base={viewHeight} center='67' height='8'/>
                     <TreeShape base={viewHeight} center='70' height='9'/>

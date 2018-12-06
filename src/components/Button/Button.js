@@ -37,6 +37,11 @@ class Button extends Component {
                 <a onClick={(event) => this.anchorLinkClick(event, href)} href={href} className={classNameAttr} target={target}>{this.props.children}</a>
             );
         }
+        else if ( href === '' && typeof this.props.onClick !== 'undefined') {
+           return (
+               <span onClick={this.props.onClick} className={classNameAttr}>{this.props.children}</span>
+           );
+        }
 
         return (
             <NavLink to={href} className={classNameAttr} target={target} exact>{this.props.children}</NavLink>

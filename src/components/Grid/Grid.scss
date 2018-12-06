@@ -1,7 +1,6 @@
 @import './../../styles/settings';
 @import './../../styles/mixins';
 
-
 $grid-template-columns: '';
 @for $col from 1 through $grid-columns {
     $grid-template-columns: $grid-template-columns + ' 1fr';
@@ -21,11 +20,6 @@ $grid-template-columns: unquote($grid-template-columns);
         justify-content: space-around;
     }
 
-    &.grid-compensated-gap .grid-content {
-        margin-left: -($grid-gap / 2);
-        margin-right: -($grid-gap / 2);
-    }
-
     $alignments: (normal, stretch, center, start, end);
     @each $alignment in $alignments {
         &.grid-align-#{$alignment} .grid-content {
@@ -33,10 +27,32 @@ $grid-template-columns: unquote($grid-template-columns);
         }
     }
 
+    &.grid-compensated-gap .grid-content {
+        margin-left: -($grid-gap / 2);
+        margin-right: -($grid-gap / 2);
+    }
+
     .GridItem {
         grid-column: span $grid-columns;
         padding-left: $grid-gap / 2;
         padding-right: $grid-gap / 2;
+    }
+
+    $grid-gap-iterator: 1;
+    @each $screen, $size in $breakpoints {
+        $responsive-gap: $grid-gap * $grid-gap-iterator / 2;
+        $grid-gap-iterator: $grid-gap-iterator + 0.25;
+        @include breakpoint(#{$screen}) {
+            .GridItem {
+                padding-left: $responsive-gap;
+                padding-right: $responsive-gap;
+            }
+
+            &.grid-compensated-gap .grid-content {
+                margin-left: -$responsive-gap;
+                margin-right: -$responsive-gap;
+            }
+        }
     }
 
     // column span

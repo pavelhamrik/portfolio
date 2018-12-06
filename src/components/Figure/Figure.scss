@@ -1,0 +1,49 @@
+@import './../../styles/settings';
+@import './../../styles/mixins';
+
+.Figure {
+    max-width: 100%;
+    border-radius: $block-border-radius;
+    box-shadow: $soft-shadow;
+    border: 0.0625rem solid $lighter-gray;
+    margin: $vertical-margin 0;
+    overflow: hidden;
+    //height: 100%;
+
+    &:not(.unpadded) .image-container {
+        @include responsive-padding($horizontal-factor: 0.5);
+    }
+
+    img {
+        max-width: 100%;
+        //max-height: 100%;
+        border-radius: inherit;
+    }
+
+    .caption {
+        //margin-top: 1rem;
+        //box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.05);
+        border-top: 0.0625rem solid $faint-gray;
+        padding: $vertical-padding * 2 $horizontal-padding $vertical-padding * 2.5;
+        font-size: $small-font-size;
+        color: $dark-gray;
+        text-align: center;
+    }
+
+    &.floating {
+        background: none;
+        box-shadow: none;
+        border: none;
+        filter:
+                drop-shadow($floating-shadow-far)
+                drop-shadow($floating-shadow-close)
+                drop-shadow(0 0 1px $faint-gray);
+        max-height: 100vw;
+        padding: 0;
+        //height: auto;
+
+        img {
+            max-width: unset;
+        }
+    }
+}

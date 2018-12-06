@@ -107,16 +107,6 @@ ol {
     }
 }
 
-@each $screen, $size in $breakpoints {
-    @each $alignment in $alignments {
-        @include breakpoint($screen) {
-            .#{$screen}-#{$alignment} {
-                text-align: $alignment;
-            }
-        }
-    }
-}
-
 code {
     background: $faint-gray;
     border-radius: $block-border-radius;
@@ -126,6 +116,7 @@ code {
     padding: $vertical-padding * 2 $horizontal-padding * 1.5;
     margin-top: $vertical-margin;
     margin-bottom: $vertical-margin;
+    white-space: pre;
 }
 
 table {
@@ -143,21 +134,32 @@ table {
     }
 
     tr {
-        border-bottom: 0.0626rem solid $lighter-gray;
+        border-bottom: 0.0625rem solid $lighter-gray;
     }
 
     &.table-aesthetic td:first-child {
-        width: unquote((100 / 4.2358) + '%');
+        width: 35%;
+        @include breakpoint(small) {
+            width: unquote((100 / 4.2358) + '%');
+        }
     }
 }
 
 blockquote {
     font-family: $headings-font-family;
-    font-size: map-get($headings, h2);
+    font-size: map-get($headings, h3);
     font-weight: $font-weight-normal;
     font-style: italic;
     margin: $vertical-margin 0;
     max-width: 60rem;
+
+    @include breakpoint(medium) {
+        font-size: map-get($headings, h2);
+    }
+
+    @include breakpoint(large) {
+        font-size: map-get($headings, h1);
+    }
 }
 
 cite {
