@@ -7,7 +7,8 @@ import smoothscroll from 'smoothscroll-polyfill';
 import Home from './content/Home';
 import Contact from './content/Contact';
 import NotFound from './content/NotFound';
-import FigureProject from "./content/projects/FigureProject";
+import Work from './content/Work';
+import FigureProject from "./content/work/FigureProject";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -39,7 +40,8 @@ class App extends Component {
                         <Switch>
                             <Route exact path='/' component={Home}/>
                             <Route path='/contact/' component={Contact}/>
-                            <Route path='/project/figure/' component={FigureProject}/>
+                            <Route path='/work/' component={Work}/>
+                            <Route path='/work/figure/' component={FigureProject}/>
                             <Route component={NotFound}/>
                         </Switch>
                     </div>

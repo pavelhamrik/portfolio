@@ -1,0 +1,188 @@
+
+// // colors
+
+export const BLACK = '#2A3540';
+export const WHITE = '#FFFFFF';
+
+export const OFF_WHITE = '#F7F5F5';
+
+export const FAINT_GRAY = BLACK.concat('11'); // 0.075
+// $lighter-gray: rgba($black, 0.15);
+// $light-gray: rgba($black, 0.25);
+// $medium-gray: rgba($black, 0.45);
+// $dark-gray: rgba($black, 0.65);
+// $darker-gray: rgba($black, 0.85);
+
+// $solid-faint-gray: scale-color($black, $lightness: 92%);
+
+// $desaturate: -20;
+// $darken: -20%;
+// $lighten: 20%;
+
+// $colors: (
+//     primary: scale-color(#6632a6, $saturation: $desaturate),
+//     secondary: scale-color(#03a9f4, $saturation: $desaturate),
+//     warning: scale-color(#ff9800, $saturation: $desaturate),
+//     success: scale-color(#8bc34a, $saturation: $desaturate),
+//     failure: scale-color(#f44336, $saturation: $desaturate),
+//     disabled: $light-gray,
+//     faded: $faint-gray
+// );
+
+// $contrast-threshold: 0.5;
+
+// $background-color: $off-white;
+// $footer-color: map-get($colors, primary);
+
+// // animations
+
+// $default-easing: ease-out;
+// $fadein-easing: ease-in;
+// $swing-easing: cubic-bezier(0.7,0.2,0.3,1);
+
+// $lightning-speed: 0.15s;
+// $fast-speed: 0.25s;
+// $medium-speed: 0.45s;
+// $slow-speed: 0.85s;
+// $sluggish-speed: 2s;
+
+// $hover-transition: background-color $lightning-speed $default-easing,
+//                    color $lightning-speed $default-easing,
+//                    opacity $lightning-speed $default-easing,
+//                    box-shadow $lightning-speed $default-easing;
+// $size-transition: width $medium-speed $default-easing,
+//                   height $medium-speed $default-easing;
+
+// // box shadows
+
+// $soft-shadow-close: 0 0.125rem 0.25rem rgba(0,0,0,0.025);
+// $soft-shadow-far: 0 0.25rem 1rem rgba(0,0,0,.025);
+// $soft-shadow:
+//     $soft-shadow-close,
+//     $soft-shadow-far;
+
+// $raised-shadow-close: 0 0.125rem 0.5rem rgba(0,0,0,0.085);
+// $raised-shadow-far: 0 0.3125rem 1.25rem rgba(0,0,0,0.035);
+// $raised-shadow:
+//     $raised-shadow-close,
+//     $raised-shadow-far;
+
+// $floating-shadow-close: 0 0.25rem 0.5rem rgba(0,0,0,0.035);
+// $floating-shadow-far: 0 0.5rem 1.25rem rgba(0,0,0,0.075);
+// $floating-shadow:
+//     $floating-shadow-close,
+//     $floating-shadow-far;
+
+// $button-shadow-close: 0 0.125rem 0.3125rem rgba(0,0,0,0.05);
+// $button-shadow: $button-shadow-close;
+
+// // dimensions
+
+// $app-min-width: 320px;
+
+export const BORDER_RADIUS = '0.25rem';
+export const BLOCK_BORDER_RADIUS = '0.5rem';
+
+// $vertical-padding: 0.5rem;
+// $horizontal-padding: 0.75rem;
+
+// $vertical-margin:  1.25rem;
+
+// // typography
+
+// // $font-family: 'Nunito Sans', 'Roboto', sans-serif;
+// // $font-family: 'Roboto', 'Helvetica', sans-serif;
+// $font-family: 'IBM Plex Sans', sans-serif;
+// // $headings-font-family: 'Merriweather', 'Roboto Slab', serif;
+// $headings-font-family: $font-family;
+
+// $headline-font-size: 3rem;
+
+// $headings: (
+//     h1: 2rem,
+//     h2: 1.5rem,
+//     h3: 1.25rem,
+// );
+
+// $font-size: 1rem;
+// $small-font-size: 0.875rem;
+// $large-font-size: 1.25rem;
+
+// $slideshow-headings: (
+//         h1: 3rem,
+//         h2: 2.25rem,
+//         h3: 1.75rem,
+// );
+
+// $slideshow-font-size: 1.5rem;
+// $slideshow-small-font-size: 1.35rem;
+// $slideshow-large-font-size: 2rem;
+
+// $line-height: 1.625;
+// $headings-line-height: 1.4;
+
+// $font-weight-normal: 400;
+// $font-weight-bold: 700;
+
+// $alignments: (
+//     left,
+//     right,
+//     center
+// );
+
+// // buttons
+
+// $button-padding: 0.6875rem 1rem;
+// $inline-button-padding: 0.25rem 0;
+// $large-button-padding: 0.875rem 1.25rem;
+// $button-border-radius: $border-radius;
+
+// // tooltips
+
+// $tooltip-padding: $button-padding;
+// $tooltip-border-radius: $border-radius;
+
+// // labels
+
+// $label-padding: 0.375rem 0.875rem;
+// $label-border-radius: 2rem;
+
+// // grid
+
+// $grid-columns: 12;
+// $grid-gap: 1.5rem;
+// $grid-max-width: 1600px;
+
+// // media queries
+
+// $breakpoints: (
+//     all: 0,
+//     small: 600px,
+//     medium: 900px,
+//     large: 1200px,
+//     huge: 1800px
+// );
+
+// $paddings: (
+//     all: ( vertical: 1rem, horizontal: 1.5rem ),
+//     default: ( vertical: 0.5rem, horizontal: 0.75rem ),
+//     small: ( vertical: 0.5rem, horizontal: 0.75rem ),
+//     medium: ( vertical: 0.75rem, horizontal: 1.25rem ),
+//     large: ( vertical: 1.0rem, horizontal: 1.5rem ),
+//     huge: ( vertical: 1.0rem, horizontal: 2.25rem )
+// );
+
+// // layers
+
+// $layers: (
+//     back: -1,
+//     base: 0,
+//     sticky: 2,
+//     fixed: 4,
+//     tooltip: 8,
+//     modal: 10,
+// );
+
+// // tables
+
+// $table-cell-padding: 0.5rem 0.75rem;

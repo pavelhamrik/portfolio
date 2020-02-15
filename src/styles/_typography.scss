@@ -148,8 +148,8 @@ table {
 blockquote {
     font-family: $headings-font-family;
     font-size: map-get($headings, h3);
-    font-weight: $font-weight-normal;
-    font-style: italic;
+    font-weight: $font-weight-bold;
+    // font-style: italic;
     margin: $vertical-margin 0;
     max-width: 60rem;
 
@@ -173,19 +173,20 @@ cite {
 }
 
 .quote {
-    padding-left: 1.5rem;
+    padding-left: 1.75rem;
     position: relative;
-    color: $dark-gray;
+    color: $darker-gray;
+    margin: $vertical-margin 0;
 
     &:before {
-        background-color: $light-gray;
+        background-color: rgba(map-get($colors, primary), 0.5);
         border-radius: $border-radius;
         content: '';
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
-        width: 0.1875rem;
+        width: 0.25rem;
     }
 }
 

@@ -2,7 +2,7 @@
 @import './../../styles/mixins';
 
 header {
-    background: $white;
+    background: $background-color;
     box-shadow: $soft-shadow;
     @include responsive-padding();
     position: relative;

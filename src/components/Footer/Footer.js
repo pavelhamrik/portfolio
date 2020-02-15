@@ -27,10 +27,9 @@ class Footer extends Component {
                     </GridItem>
                     <GridItem>
                         <p className='all-align-center small-align-right'>
-                            <Button href={MailToUrl} className='button-plain button-inverse'>Email</Button>
+                            <Button href={MailToUrl} className='button-plain button-inverse'>Email&nbsp;&#8599;</Button>
                             <Button href='https://www.linkedin.com/in/hamrik/' target='_blank' className='button-plain button-inverse'>LinkedIn&nbsp;&#8599;</Button>
                             <Button href='https://github.com/pavelhamrik' target='_blank' className='button-plain button-inverse'>GitHub&nbsp;&#8599;</Button>
-                            <Button href='https://www.instagram.com/pavelhamrik/' target='_blank' className='button-plain button-inverse'>Instagram&nbsp;&#8599;</Button>
                         </p>
                     </GridItem>
                 </Grid>
