@@ -19,7 +19,7 @@
     "smoothscroll-polyfill": "^0.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts  --openssl-legacy-provider start",
     "build": "react-scripts build",
     "postbuild": "rm -rf docs && mkdir docs && mv build/* docs && rm -rf build",
     "test": "react-scripts test --env=jsdom",
